@@ -1,6 +1,21 @@
-<?php
+<html>
+    <head>
+        
+        <script>
+            function afficheProduit(categorie){
+        console.log("j'entre dans affiche produit");
+        $.get("./pages/produitCategorie.php",{cat : categorie}, function( data ) {
+                
+        $("#contain-page").html(data);
+        });
+    }
+        </script>
+         
+    </head>
+    <body>
+       <?php
 
-//include './sql/getCategories.php'; 
+
 $categorie= getCategorie();
 ?>
 
@@ -11,14 +26,19 @@ $categorie= getCategorie();
     <?php 
     
    foreach ($categorie as $value) {
+        $cat=$value["nom"];
         
-        $echo='<a href="'.$value["nom"].'.php" class="list-group-item">'.$value["nom"].'</a>';
+        $echo='<a  onclick="afficheProduit(\''.$cat.'\');" class="list-group-item">'.$cat.'</a>';
         echo $echo;
     }
     ?>
     </fieldset>
     </form>
 
-</div>
+</div> 
+    </body>
+</html>
+
+
 
 
