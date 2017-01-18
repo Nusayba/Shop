@@ -18,9 +18,11 @@
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
     
-    <script type="text/javascript" src="js/chargePage.js"></script>
+    <script type="text/javascript" src="js/fonction.js"></script>
     
-    <?php include 'sql/connexionBDD.php'; ?>
+    <?php include 'sql/connexionBDD.php';
+            include 'sql/fonction.php';
+    ?>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

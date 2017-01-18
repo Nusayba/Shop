@@ -1,6 +1,7 @@
 <?php
 
-include './sql/getCategories.php'; 
+//include './sql/getCategories.php'; 
+$categorie= getCategorie();
 ?>
 
 <div class="list-group">
@@ -9,7 +10,7 @@ include './sql/getCategories.php';
             <legend>Catégories</legend>
     <?php 
     
-   foreach ($lesCategories as $value) {
+   foreach ($categorie as $value) {
         
         $echo='<a href="'.$value["nom"].'.php" class="list-group-item">'.$value["nom"].'</a>';
         echo $echo;

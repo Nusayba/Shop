@@ -1,5 +1,5 @@
 <?php
-    include './sql/getCategories.php';
+    $categorie= getCategorie();
 ?>
 
 <div>
@@ -14,7 +14,7 @@
             <select>
             <?php 
             
-                foreach ($lesCategories as $value) {
+                foreach ($categorie as $value) {
         
                     $option='<option>'.$value["nom"].'</option>';
                     echo $option;
