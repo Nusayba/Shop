@@ -18,6 +18,9 @@
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
     
+    <!-- Mon CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    
     <script type="text/javascript" src="js/fonction.js"></script>
     
     <?php include 'sql/connexionBDD.php';

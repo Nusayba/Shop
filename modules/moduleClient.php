@@ -3,7 +3,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Accueil</a>
+                        <a href="index.php">Accueil</a>
                     </li>
                     
                     <?php 
