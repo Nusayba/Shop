@@ -16,6 +16,7 @@ if($utilisateur==true){
     if($utilisateur[0]['password']==$pwd){
         
         $_SESSION['loginShop']=$login;
+        $_SESSION['id_client']=$utilisateur[0]['id'];
         ?><script>
             document.location.replace('../index.php');
         </script><?php

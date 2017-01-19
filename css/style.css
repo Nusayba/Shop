@@ -2,6 +2,25 @@ form{
     margin-bottom: 50px;
 }
 
-#description{
+table tr th{
+     padding: 10px;
+}
+
+table tr td{
+     padding: 10px;
+}
+
+img{
+    height: 250px;
+}
+
+.total{
+    font-weight: bold;
+}
+.bullePanier{
+    background-color: red;
+    color:white;
+    border-radius: 5px;
     
 }
+

@@ -3,7 +3,7 @@
 ?>
 
 <div>
-    <form>
+    <form id="formFiltre">
         <fieldset>
             <legend>Recherche</legend>
         
@@ -11,12 +11,12 @@
             <input type="text" id="recherche" name="recherche">
         </p>
         <p>Filtrer par catégorie : <br/>
-            <select>
+            <select name="categorie">
             <?php 
             
                 foreach ($categorie as $value) {
         
-                    $option='<option>'.$value["nom"].'</option>';
+                    $option='<option value="'.$value["nom"].'">'.$value["nom"].'</option>';
                     echo $option;
                 }
             ?>
@@ -24,7 +24,8 @@
             </select>
         </p>
         
-        <input type="submit" value="Lancer la recherche" class="btn-primary">
+        <input type="button" value="Lancer la recherche" class="btn-primary" onclick='$("#contain-page").
+                    load("./pages/produitCategorie.php", $("#formFiltre").serialize());'>
         </fieldset>
     </form>
 </div>

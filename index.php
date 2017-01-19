@@ -131,9 +131,10 @@
 
                 </div>
 
-                <div class="row">
+                <div class="row" id="produitAccueil">
+                    <?php include 'pages/produitCategorie.php'; ?>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
+<!--                    <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="images/nem.jpg" alt="">
                             <div class="caption">
@@ -241,7 +242,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
                     
 

@@ -1,5 +1,13 @@
 
+<script>
+    function affichePanier(){
+        $.get("./pages/panier.php", function( data ) {
+                
+        $("#contain-page").html(data);
+        });
+    }
 
+</script>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
                     <li>
@@ -23,8 +31,15 @@
                     <li>
                         <a href="#">Contact</a>
                     </li>
+                    <?php 
+                        
+                        $id_client=$_SESSION['id_client'];
+                        $nbPanier=$mysql->query("SELECT count(*) FROM article_commande JOIN commande ON commande.id=article_commande.commande_id JOIN client ON client.id=commande.client_id WHERE client.id=$id_client AND commande.etat='panier'");
+                        $leNbPanier=$nbPanier->fetchAll();
+                    ?>
                     <li>
-                        <a href="#">Panier</a>
+                        <a onclick="affichePanier()">Panier <span class="bullePanier" id="panierRouge"><?php echo $leNbPanier[0][0] ; ?></span></a>
+                        
                     </li>
                 </ul>
             </div>
