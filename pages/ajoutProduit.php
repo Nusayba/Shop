@@ -22,9 +22,10 @@
          
             </select></p>
         </div>
-            <div class="col-xs-6">
-        <p>Description : <textarea class="form-control" rows="5" id="description" name="description"></textarea></p>
-        <input type="submit" value="Ajout du produit" class="btn-primary">
+        <div class="col-xs-6">
+            <p>URL de l'image : <input type="text" id="url" name="url"></p>
+            <p>Description : <textarea class="form-control" rows="5" id="description" name="description"></textarea></p>
+            <input type="submit" value="Ajout du produit" class="btn-primary">
         </div>
         
         

@@ -6,7 +6,7 @@
                     
                     
                         <li>
-                            <a href="#">Catégorie</a>
+                            <a href="#" id="categorie">Catégorie</a>
                         </li>
                     
                     
@@ -14,7 +14,7 @@
                         <a href="#">Client</a>
                     </li>
                     <li>
-                        <a href="#">Commande</a>
+                        <a href="#" id="commande">Commande</a>
                     </li>
                 </ul>
             </div>

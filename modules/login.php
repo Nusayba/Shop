@@ -19,6 +19,7 @@
         <p>Mot de passe : <br/>
             <input type="password" id="pwd" name="pwd">
         </p>
+        <a onclick='$("#contain-page").load("./pages/inscription.php");'><h6>Inscription</h6></a><br/>
         <input type="submit" value="Connexion" class="btn-primary">
         </fieldset>
     </form> 

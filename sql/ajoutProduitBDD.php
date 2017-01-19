@@ -12,8 +12,9 @@ $description=$_POST['description'];
 $prix= floatval($_POST['prix']) ;
 $categorie=intval($_POST['categorie']);
 $nb_stock= intval($_POST['nb_stock']) ;
+$url= $_POST['url'] ;
 
-$mysql->query("INSERT INTO produit (nom, description, prix, nb_stock, url, categorie_id) VALUES ('$nom','$description','$prix',$nb_stock,'test',$categorie)");
+$mysql->query("INSERT INTO produit (nom, description, prix, nb_stock, url, categorie_id) VALUES ('$nom','$description','$prix',$nb_stock,'$url',$categorie)");
 
 
 
