@@ -23,6 +23,12 @@ window.onload = function() {
         $("#contain-page").load("./pages/commandeAdmin.php");
         
         });
+        
+    $("#client").click(function(e) {
+        console.log("j'entre dans la page client");
+        $("#contain-page").load("./pages/clientAdmin.php");
+        
+        });
     
     
     

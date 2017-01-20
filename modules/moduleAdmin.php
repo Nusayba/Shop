@@ -11,7 +11,7 @@
                     
                     
                     <li>
-                        <a href="#">Client</a>
+                        <a href="#" id="client">Client</a>
                     </li>
                     <li>
                         <a href="#" id="commande">Commande</a>

@@ -20,7 +20,7 @@
                         }else{
                     ?>
                         <li>
-                            <a href="#">Mon compte</a>
+                            <a onclick="$('#contain-page').load('./pages/monCompte.php')">Mon compte</a>
                         </li>
                     <?php
                         }
@@ -38,7 +38,7 @@
                         $leNbPanier=$nbPanier->fetchAll();
                     ?>
                     <li>
-                        <a onclick="affichePanier()">Panier <span class="bullePanier" id="panierRouge"><?php echo $leNbPanier[0][0] ; ?></span></a>
+                        <a onclick="affichePanier()">Panier <?php if (isset($_SESSION['loginShop'])) { ?><span class="bullePanier" id="panierRouge"><?php echo $leNbPanier[0][0] ; ?></span><?php } ?></a>
                         
                     </li>
                 </ul>
