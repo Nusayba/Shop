@@ -8,10 +8,10 @@
             
         <?php
 
-include '../sql/connexionBDD.php';
+include '../../connexionBDD.php';
 
 
-$categories=$mysql->query("SELECT id, nom FROM categorie");
+$categories=$mysql->query("SELECT id, nom FROM sa_categorie");
 $lesCategories=$categories->fetchAll();
     
 

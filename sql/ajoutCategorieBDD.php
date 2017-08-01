@@ -5,12 +5,12 @@
     </head>
     <body>
         <?php
-include 'connexionBDD.php';
+include '../../connexionBDD.php';
 
 $nomCategorie=$_POST['categorie'];
 
 
-$mysql->query("INSERT INTO categorie (nom) VALUES ('$nomCategorie')");
+$mysql->query("INSERT INTO sa_categorie (nom) VALUES ('$nomCategorie')");
 
 
 

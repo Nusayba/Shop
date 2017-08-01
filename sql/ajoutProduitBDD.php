@@ -5,7 +5,7 @@
     </head>
     <body>
         <?php
-include 'connexionBDD.php';
+include '../../connexionBDD.php';
 
 $nom=$_POST['nom'];
 $description=$_POST['description'];
@@ -14,7 +14,7 @@ $categorie=intval($_POST['categorie']);
 $nb_stock= intval($_POST['nb_stock']) ;
 $url= $_POST['url'] ;
 
-$mysql->query("INSERT INTO produit (nom, description, prix, nb_stock, url, categorie_id) VALUES ('$nom','$description','$prix',$nb_stock,'$url',$categorie)");
+$mysql->query("INSERT INTO sa_produit (nom, description, prix, nb_stock, url, categorie_id) VALUES ('$nom','$description','$prix',$nb_stock,'$url',$categorie)");
 
 
 

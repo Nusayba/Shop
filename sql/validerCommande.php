@@ -1,16 +1,16 @@
 
 <?php
-    include 'connexionBDD.php';
+    include '../../connexionBDD.php';
 
     session_start();
     $id_client=$_SESSION['id_client'];
 
-    $mysql->query("UPDATE commande SET etat='valider' WHERE commande.client_id='$id_client' AND commande.etat='panier';");
+    $mysql->query("UPDATE sa_commande SET etat='valider' WHERE sa_commande.client_id='$id_client' AND sa_commande.etat='panier';");
     
     echo'<h1>Votre commande a été validé</h1>';
     echo'<h3>Adresse de livraison : </h3>';
     
-    $adresse=$mysql->query("SELECT client.adresse FROM client WHERE client.id='$id_client'");
+    $adresse=$mysql->query("SELECT sa_client.adresse FROM sa_client WHERE sa_client.id='$id_client'");
     $lAdresse=$adresse->fetchAll();
     echo'<p>'.$lAdresse[0]['adresse'].'</p>';
     

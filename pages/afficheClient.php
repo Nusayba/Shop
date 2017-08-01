@@ -8,10 +8,10 @@
             
         <?php
 
-include '../sql/connexionBDD.php';
+include '../../connexionBDD.php';
 
 
-$clients=$mysql->query("SELECT id, nom, prenom, adresse, email, pseudo FROM client");
+$clients=$mysql->query("SELECT id, nom, prenom, adresse, email, pseudo FROM sa_client");
 $lesClients=$clients->fetchAll();
     
 

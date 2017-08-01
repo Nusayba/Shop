@@ -23,7 +23,7 @@
     
     <script type="text/javascript" src="js/fonction.js"></script>
     
-    <?php include 'sql/connexionBDD.php';
+    <?php include '../connexionBDD.php';
             include 'sql/fonction.php';
     ?>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -55,7 +55,7 @@
             <?php 
             if(!isset($_SESSION['loginShop'])){
                 
-            }elseif($_SESSION['loginShop']=="root"){
+            }elseif($_SESSION['loginShop']=="admin"){
                    include 'modules/moduleAdmin.php'; 
                 }
              ?>

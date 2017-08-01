@@ -18,19 +18,19 @@
 
     if(isset($_GET['cat'])){
         $categorie=$_GET['cat'];
-        include '../sql/connexionBDD.php';
-        $produits=$mysql->query("SELECT produit.nom, produit.url, produit.description, produit.prix, produit.id FROM produit JOIN categorie ON categorie.id=produit.categorie_id WHERE categorie.nom='$categorie' ORDER BY produit.nom");
+        include '../../connexionBDD.php';
+        $produits=$mysql->query("SELECT sa_produit.nom, sa_produit.url, sa_produit.description, sa_produit.prix, sa_produit.id FROM sa_produit JOIN sa_categorie ON sa_categorie.id=sa_produit.categorie_id WHERE sa_categorie.nom='$categorie' ORDER BY sa_produit.nom");
         $lesProduits=$produits->fetchAll();
         echo "<h1>".$categorie."</h1>";
     }elseif(isset($_GET['recherche'])){
         $categorie=$_GET['categorie'];
         $champRecherche=$_GET['recherche'];
-        include '../sql/connexionBDD.php';
-        $produits=$mysql->query("SELECT produit.nom, produit.url, produit.description, produit.prix, produit.id FROM produit JOIN categorie ON categorie.id=produit.categorie_id WHERE categorie.nom='$categorie' AND produit.nom LIKE '%$champRecherche%' ORDER BY produit.nom");
+        include '../../connexionBDD.php';
+        $produits=$mysql->query("SELECT sa_produit.nom, sa_produit.url, sa_produit.description, sa_produit.prix, sa_produit.id FROM sa_produit JOIN sa_categorie ON sa_categorie.id=sa_produit.categorie_id WHERE sa_categorie.nom='$categorie' AND sa_produit.nom LIKE '%$champRecherche%' ORDER BY sa_produit.nom");
         $lesProduits=$produits->fetchAll();
         echo "<h1>".$categorie."</h1>";
     }else{
-        $produits=$mysql->query("SELECT produit.nom, produit.url, produit.description, produit.prix, produit.id FROM produit JOIN categorie ON categorie.id=produit.categorie_id WHERE produit.id=11 OR produit.id=14 OR produit.id=16 OR produit.id=17 OR produit.id=20 OR produit.id=13 ORDER BY produit.nom");
+        $produits=$mysql->query("SELECT sa_produit.nom, sa_produit.url, sa_produit.description, sa_produit.prix, sa_produit.id FROM sa_produit JOIN sa_categorie ON sa_categorie.id=sa_produit.categorie_id WHERE sa_produit.id=1 OR sa_produit.id=2 OR sa_produit.id=3 OR sa_produit.id=17 OR sa_produit.id=20 OR sa_produit.id=13 ORDER BY sa_produit.nom");
         $lesProduits=$produits->fetchAll();
     }
 

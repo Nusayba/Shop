@@ -8,10 +8,10 @@
             
         <?php
 
-include '../sql/connexionBDD.php';
+include '../../connexionBDD.php';
 
 
-$produits=$mysql->query("SELECT produit.id, produit.nom, description, prix, nb_stock, url, categorie.nom as nom_categorie FROM produit JOIN categorie ON categorie.id=produit.categorie_id;");
+$produits=$mysql->query("SELECT sa_produit.id, sa_produit.nom, description, prix, nb_stock, url, sa_categorie.nom as nom_categorie FROM sa_produit JOIN sa_categorie ON sa_categorie.id=sa_produit.categorie_id;");
 $lesProduits=$produits->fetchAll();
     
 

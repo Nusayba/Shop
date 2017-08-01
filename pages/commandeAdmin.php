@@ -8,10 +8,10 @@
             
         <?php
 
-include '../sql/connexionBDD.php';
+include '../../connexionBDD.php';
 
 
-$commandes=$mysql->query("SELECT commande.id, commande.date, client.nom, client.prenom, commande.etat FROM commande JOIN client ON client.id=commande.client_id;");
+$commandes=$mysql->query("SELECT sa_commande.id, sa_commande.date, sa_client.nom, sa_client.prenom, sa_commande.etat FROM sa_commande JOIN sa_client ON sa_client.id=sa_commande.client_id;");
 $lesCommandes=$commandes->fetchAll();
     
 

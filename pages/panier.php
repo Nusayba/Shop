@@ -11,11 +11,17 @@
 
 <?php
 
-include '../sql/connexionBDD.php';
+include '../../connexionBDD.php';
 session_start();
 $id_client=$_SESSION['id_client'];
 
-$panier=$mysql->query("SELECT article_commande.produit_id, article_commande.quantite, produit.nom, produit.prix FROM article_commande JOIN commande ON commande.id=article_commande.commande_id JOIN client ON client.id=commande.client_id JOIN produit ON produit.id=article_commande.produit_id WHERE client.id=$id_client AND commande.etat='panier'");
+$panier=$mysql->query("SELECT sa_article_commande.produit_id, sa_article_commande.quantite, sa_produit.nom, sa_produit.prix "
+        . "FROM sa_article_commande "
+        . "JOIN sa_commande ON sa_commande.id=sa_article_commande.commande_id "
+        . "JOIN sa_client ON sa_client.id=sa_commande.client_id "
+        . "JOIN sa_produit ON sa_produit.id=sa_article_commande.produit_id "
+        . "WHERE sa_client.id=$id_client "
+        . "AND sa_commande.etat='panier'");
 $lePanier=$panier->fetchAll();
     
 

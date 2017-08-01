@@ -2,9 +2,9 @@
 
 $idCommande=$_POST['idCommande'];
 
-include 'connexionBDD.php';
+include '../../connexionBDD.php';
 
-$mysql->query("UPDATE commande SET commande.etat='expédié' WHERE commande.id=$idCommande;");
+$mysql->query("UPDATE sa_commande SET sa_commande.etat='expédié' WHERE sa_commande.id=$idCommande;");
 
 include '../pages/commandeAdmin.php';
 

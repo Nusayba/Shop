@@ -1,11 +1,11 @@
 <?php
-include 'connexionBDD.php';
+include '../../connexionBDD.php';
 session_start();
 
 $login=$_POST['user'];
 $pwd=$_POST['pwd'];
 
-$sql="SELECT * FROM client WHERE pseudo='".$login."';";
+$sql="SELECT * FROM sa_client WHERE pseudo='".$login."';";
 $user=$mysql->query($sql);
 $utilisateur=$user->fetchAll();
 
